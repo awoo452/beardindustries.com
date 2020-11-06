@@ -1,0 +1,39 @@
+@import './variables';
+@import './nav';
+@import './main';
+@import './carousel';
+@import './footer';
+@import './contactform';
+@import './about';
+
+body {
+
+    margin: 0;
+    
+    h1, h2 {
+        font-family: $accent-font-family;
+        color: $font-accent-color;
+    }
+    h3 {
+        font-family: $main-font-family;
+        color: $font-main-color;
+    }
+    h5 {
+        font-family: $accent-font-family;
+        color: $font-accent-color;
+    }
+    p {
+        font-family: $main-font-family;
+        color: $font-main-color;
+    }
+    a {
+        font-family: $main-font-family;
+        color: $font-main-color;
+    }
+
+    .hidden {
+        all: unset;
+        display: none;
+    }
+
+}
