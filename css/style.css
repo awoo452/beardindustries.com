@@ -1,13 +1,7 @@
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   height: 50px;
   margin: 0;
   background-color: white;
@@ -30,31 +24,19 @@ nav .collapsed {
 }
 
 nav .navContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 nav .navContainer #navIconContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-right: .5em;
 }
 
 nav .navContainer #navIconContainer .navIcon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 35px;
   width: 35px;
   margin-left: .5em;
@@ -111,18 +93,10 @@ main #aboutHeading {
 }
 
 main .infoContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 1em;
   background-color: #c8c8c8;
   border-top: 1px solid gray;
@@ -143,15 +117,9 @@ main .infoContainer img {
 
 @media (min-width: 950px) {
   main .infoContainer {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
   main .infoContainer #infoOne {
     max-width: 25vw;
@@ -210,12 +178,8 @@ footer ul {
   list-style-type: none;
   margin: auto;
   margin-bottom: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   width: 50%;
   padding: 0;
 }
@@ -225,16 +189,9 @@ footer .socialMediaIcon {
 }
 
 #contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   padding-bottom: 1.5em;
   background-color: #c8c8c8;
@@ -248,16 +205,9 @@ footer .socialMediaIcon {
 }
 
 #contact form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #contact p {
@@ -280,18 +230,10 @@ footer .socialMediaIcon {
 }
 
 #about {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 1em;
   background-color: white;
   border-bottom: 1px solid gray;
@@ -327,15 +269,9 @@ footer .socialMediaIcon {
 
 @media (min-width: 950px) {
   #about {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
   #about #aboutOne {
     max-width: 25vw;
@@ -378,4 +314,3 @@ body .hidden {
   all: unset;
   display: none;
 }
-/*# sourceMappingURL=style.css.map */
