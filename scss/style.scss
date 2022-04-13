@@ -1,39 +1,202 @@
-@import './variables';
-@import './nav';
-@import './main';
-@import './carousel';
-@import './footer';
-@import './contactform';
-@import './about';
+@import './variables.scss';
+@import './mixins.scss';
 
 body {
-
+    box-sizing: border-box;
     margin: 0;
+    h1, h2, h3, h4, h5, h6, a, p, i {
+        text-rendering: optimizeLegibility;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+#index {
+    border-bottom: 1px solid black;
+    height: 69px;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        @include margin-killer;
+        @include padding-killer;
+        #logo {
+            @include custom-image(url('/img/3x3.png'), 100%, center, no-repeat, 10%, 59px);
+            margin-top: 5px;
+            margin-left: 1em;
+            @media (min-width: 600px) {
+                width: 7%;
+            }
+            @media (min-width: 1000px) {
+                width: 5%;
+            }
+        }
+        #buttons {
+            margin-right: .25em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: right;
+            @include extra-large-font;
+            
+            a {
+                margin-right: .75em;
+                text-decoration: none;
+                color: black;
+            }
+            i {
+                border-right: 1px solid black;
+                padding-right: 5px;
+            }
+        }
+    }
+}
+
+main {
+    h1 {
+        color: black;
+    }
     
-    h1, h2 {
-        font-family: $accent-font-family;
-        color: $font-accent-color;
+    h2 {
+        color: gray;
     }
-    h3 {
-        font-family: $main-font-family;
-        color: $font-main-color;
-    }
-    h5 {
-        font-family: $accent-font-family;
-        color: $font-accent-color;
-    }
+    
     p {
-        font-family: $main-font-family;
-        color: $font-main-color;
+        color: gray;
     }
-    a {
-        font-family: $main-font-family;
-        color: $font-main-color;
+    border-bottom: 1px solid black;
+    #home {
+        .row {
+            position: relative;
+            border-bottom: 1px solid black;
+            h1 {
+                position: relative;
+                color: white;
+                background-image: linear-gradient(to right, black, transparent);
+                opacity: 69%;
+                @include extra-large-font;
+                @include margin-killer;
+                padding-left: 1%;
+            }
+            h4 {
+                position: relative;
+                color: black;
+                background-image: linear-gradient(to right, yellow, transparent);
+                padding-left: 1%;
+                @include large-font;
+                @include margin-killer;
+            }
+            h5 {
+                font-family: 'Roboto', sans-serif;
+                position: absolute;
+                bottom: 2%;
+                color: white;
+                padding: .5em;
+                text-align: center;
+                @include custom-border-1;
+                @include custom-image(url('/img/background.jpeg'), 101%, center, auto, 40%, auto);
+                @include margin-killer;
+                @include large-font;
+            }
+            #right {
+                right: 0;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                border-left: 1px solid rgb(138, 130, 84);;
+                border-right: 0;
+            }
+            #img1 {
+                @include custom-image(url('/img/img1.png'), 125%, center, no-repeat, 100%, 300px);
+                @media (min-width: 450px) {
+                    background-size: 100%;
+                }
+                @media (min-width: 1000px) {
+                    height: 450px;
+                }
+            }
+            #img2 {
+                @include custom-image(url('/img/img2.png'), 125%, center, no-repeat, 100%, 300px);
+                @media (min-width: 450px) {
+                    background-size: 100%;
+                }
+                @media (min-width: 1000px) {
+                    height: 450px;
+                }
+            }
+            #img3 {
+                @include custom-image(url('/img/img3.png'), 125%, center, no-repeat, 100%, 300px);
+                @media (min-width: 450px) {
+                    background-size: 100%;
+                }
+                @media (min-width: 1000px) {
+                    height: 450px;
+                }
+            }
+        }
     }
+    #about {
+        .row2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            p {
+                @include margin-killer;
+                margin-bottom: 1em;
+                width: 80%;
+                @media (min-width: 625px) {
+                    width: 40%;
+                }
+                @media (min-width: 1100px) {
+                    width: 20%;
+                }
+            }
+            #img4 {
+                background: url('/img/img4.jpg');
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 40%;
+                height: 150px;
+                margin-bottom: 1em;
+                @media (min-width: 625px) {
+                    height: 250px;
+                }
+                @media (min-width: 1100px) {
+                   width: 20%;
 
-    .hidden {
-        all: unset;
-        display: none;
+                }
+            }
+            #img5 {
+                background: url('/img/img5.jpg');
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 40%;
+                height: 150px;
+                margin-bottom: 1em;
+                @media (min-width: 625px) {
+                    height: 250px;
+                }
+                @media (min-width: 1100px) {
+                    width: 20%;
+                }
+            }
+        }
+        #alternatingRow {
+            flex-direction: row-reverse;
+        }
     }
+}
 
+footer {
+    text-align: center;
+    li {
+        list-style-type: none;
+        
+        ul {
+            list-style-type: none;
+        }
+    }
 }

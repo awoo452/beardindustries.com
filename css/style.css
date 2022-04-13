@@ -1,316 +1,324 @@
-nav {
+/*
+
+https://www.koderhq.com/tutorial/sass/mixin/
+
+*/
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6, body a, body p, body i {
+  text-rendering: optimizeLegibility;
+  font-family: 'Roboto', sans-serif;
+}
+
+#index {
+  border-bottom: 1px solid black;
+  height: 69px;
+}
+
+#index ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
-  margin: 0;
-  background-color: white;
-  border-bottom: 1px solid gray;
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
 }
 
-nav img {
-  max-height: 40%;
+#index ul #logo {
+  background: url("/img/3x3.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 10%;
+  height: 59px;
+  margin-top: 5px;
   margin-left: 1em;
 }
 
-@media (min-width: 800px) {
-  nav img {
-    max-height: 80%;
+@media (min-width: 600px) {
+  #index ul #logo {
+    width: 7%;
   }
 }
 
-nav .collapsed {
-  display: none !important;
+@media (min-width: 1000px) {
+  #index ul #logo {
+    width: 5%;
+  }
 }
 
-nav .navContainer {
+#index ul #buttons {
+  margin-right: .25em;
   display: flex;
-  align-items: center;
-}
-
-nav .navContainer #navIconContainer {
-  display: flex;
-  margin-right: .5em;
-}
-
-nav .navContainer #navIconContainer .navIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 35px;
-  width: 35px;
-  margin-left: .5em;
-  border-bottom: 1px solid gray;
-  border-right: 1px solid gray;
-  border-radius: 5px;
-}
-
-nav .navContainer #navIconContainer .navIcon a {
-  font-size: 20px;
-  color: #212529;
-}
-
-nav .navContainer #navIconContainer .navIcon:hover {
-  border-color: red;
-  cursor: pointer;
-}
-
-nav .navContainer #navToggler {
-  outline-style: none;
-  height: 35px;
-  width: 40px;
-  margin-right: 1em;
-  color: #212529;
-  background-color: transparent;
-  background-position: center;
-  background-image: url("../img/bodyimg.png");
-  background-size: 100%;
-  border: none;
-  border: 1px solid gray;
-  border-radius: 5px;
-}
-
-nav .navContainer #navToggler .navArrow {
-  font-size: 25px;
-  margin: 0;
-}
-
-nav .navContainer #navToggler:hover {
-  cursor: pointer;
-  color: #212529;
-}
-
-main #indexHeading {
-  padding-left: .25em;
-  padding-right: .25em;
-  text-align: center;
-}
-
-main #aboutHeading {
-  padding-left: .5em;
-  padding-right: .5em;
-  text-align: center;
-}
-
-main .infoContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   flex-wrap: wrap;
-  padding: 1em;
-  background-color: #c8c8c8;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
+  justify-content: right;
+  /*
+    https://css-tricks.com/snippets/css/fluid-typography/
+    font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+    */
+  font-size: calc(16px + (36 - 16) * ((100vw - 300px) / (1600 - 300)));
 }
 
-main .infoContainer h3 {
-  margin: 0;
-  width: 100%;
-  text-align: center;
+#index ul #buttons a {
+  margin-right: .75em;
+  text-decoration: none;
   color: black;
 }
 
-main .infoContainer img {
-  max-width: 100%;
-  border-radius: 1em;
+#index ul #buttons i {
+  border-right: 1px solid black;
+  padding-right: 5px;
 }
 
-@media (min-width: 950px) {
-  main .infoContainer {
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
-  main .infoContainer #infoOne {
-    max-width: 25vw;
-  }
-  main .infoContainer #infoTwo {
-    max-width: 25vw;
-  }
-  main .infoContainer #infoThree {
-    max-width: 25vw;
-  }
+main {
+  border-bottom: 1px solid black;
 }
 
-main #infoOne {
-  max-width: 70vw;
-  background-color: white;
-  padding: 1em;
-  border-radius: 1em;
+main h1 {
+  color: black;
 }
 
-main #infoTwo {
-  max-width: 70vw;
-  background-color: white;
-  padding: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  border-radius: 1em;
+main h2 {
+  color: gray;
 }
 
-main #infoThree {
-  max-width: 70vw;
-  background-color: white;
-  padding: 1em;
-  border-radius: 1em;
+main p {
+  color: gray;
 }
 
-.carousel img {
-  max-width: 100%;
-  height: auto;
+main #home .row {
+  position: relative;
+  border-bottom: 1px solid black;
 }
 
-.carousel #leftArrow {
+main #home .row h1 {
+  position: relative;
+  color: white;
+  background-image: linear-gradient(to right, black, transparent);
+  opacity: 69%;
+  /*
+    https://css-tricks.com/snippets/css/fluid-typography/
+    font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+    */
+  font-size: calc(16px + (36 - 16) * ((100vw - 300px) / (1600 - 300)));
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-left: 1%;
+}
+
+main #home .row h4 {
+  position: relative;
+  color: black;
+  background-image: linear-gradient(to right, yellow, transparent);
+  padding-left: 1%;
+  /*
+    https://css-tricks.com/snippets/css/fluid-typography/
+    font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+    */
+  font-size: calc(10px + (22 - 10) * ((100vw - 300px) / (1600 - 300)));
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+main #home .row h5 {
+  font-family: 'Roboto', sans-serif;
   position: absolute;
+  bottom: 2%;
+  color: white;
+  padding: .5em;
+  text-align: center;
+  border-top: 1px solid #8a8254;
+  border-right: 1px solid #8a8254;
+  border-bottom: 1px solid #8a8254;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: url("/img/background.jpeg");
+  background-size: 101%;
+  background-position: center;
+  background-repeat: auto;
+  width: 40%;
+  height: auto;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  /*
+    https://css-tricks.com/snippets/css/fluid-typography/
+    font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+    */
+  font-size: calc(10px + (22 - 10) * ((100vw - 300px) / (1600 - 300)));
+}
+
+main #home .row #right {
+  right: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-left: 1px solid #8a8254;
+  border-right: 0;
+}
+
+main #home .row #img1 {
+  background: url("/img/img1.png");
+  background-size: 125%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+}
+
+@media (min-width: 450px) {
+  main #home .row #img1 {
+    background-size: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  main #home .row #img1 {
+    height: 450px;
+  }
+}
+
+main #home .row #img2 {
+  background: url("/img/img2.png");
+  background-size: 125%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+}
+
+@media (min-width: 450px) {
+  main #home .row #img2 {
+    background-size: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  main #home .row #img2 {
+    height: 450px;
+  }
+}
+
+main #home .row #img3 {
+  background: url("/img/img3.png");
+  background-size: 125%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+}
+
+@media (min-width: 450px) {
+  main #home .row #img3 {
+    background-size: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  main #home .row #img3 {
+    height: 450px;
+  }
+}
+
+main #about .row2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main #about .row2 p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin-bottom: 1em;
+  width: 80%;
+}
+
+@media (min-width: 625px) {
+  main #about .row2 p {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1100px) {
+  main #about .row2 p {
+    width: 20%;
+  }
+}
+
+main #about .row2 #img4 {
+  background: url("/img/img4.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 40%;
+  height: 150px;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 625px) {
+  main #about .row2 #img4 {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1100px) {
+  main #about .row2 #img4 {
+    width: 20%;
+  }
+}
+
+main #about .row2 #img5 {
+  background: url("/img/img5.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 40%;
+  height: 150px;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 625px) {
+  main #about .row2 #img5 {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1100px) {
+  main #about .row2 #img5 {
+    width: 20%;
+  }
+}
+
+main #about #alternatingRow {
+  flex-direction: row-reverse;
 }
 
 footer {
   text-align: center;
-  border-top: 1px solid gray;
 }
 
-footer a {
-  text-decoration: none;
-  font-size: 1.25em;
-}
-
-footer ul {
+footer li {
   list-style-type: none;
-  margin: auto;
-  margin-bottom: 1em;
-  display: flex;
-  justify-content: space-evenly;
-  width: 50%;
-  padding: 0;
 }
 
-footer .socialMediaIcon {
-  margin: .5em;
-}
-
-#contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 1.5em;
-  background-color: #c8c8c8;
-  text-align: center;
-}
-
-#contact h3 {
-  margin-top: 0;
-  margin-bottom: .5em;
-  color: black;
-}
-
-#contact form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#contact p {
-  margin-top: 0;
-  color: black;
-}
-
-#contact #contactInfo {
-  width: 60%;
-  margin-bottom: 1em;
-}
-
-#contact #sendIt {
-  padding: .5em;
-  background-color: red;
-  border-radius: 5px;
-  border: 1px solid gray;
-  color: white;
-  font-family: "Roboto", sans-serif;
-}
-
-#about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 1em;
-  background-color: white;
-  border-bottom: 1px solid gray;
-}
-
-#about h3 {
-  margin: 0;
-  width: 100%;
-  text-align: center;
-  color: black;
-}
-
-#about img {
-  max-width: 100%;
-  border-radius: 1em;
-}
-
-#about #aboutOne {
-  max-width: 70vw;
-  padding: 1em;
-  background-color: #c8c8c8;
-  border-radius: 1em;
-}
-
-#about #aboutTwo {
-  max-width: 70vw;
-  padding: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  background-color: #c8c8c8;
-  border-radius: 1em;
-}
-
-@media (min-width: 950px) {
-  #about {
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
-  #about #aboutOne {
-    max-width: 25vw;
-  }
-  #about #aboutTwo {
-    max-width: 25vw;
-  }
-}
-
-body {
-  margin: 0;
-}
-
-body h1, body h2 {
-  font-family: "Merriweather", sans-serif;
-  color: #212529;
-}
-
-body h3 {
-  font-family: "Roboto", sans-serif;
-  color: gray;
-}
-
-body h5 {
-  font-family: "Merriweather", sans-serif;
-  color: #212529;
-}
-
-body p {
-  font-family: "Roboto", sans-serif;
-  color: gray;
-}
-
-body a {
-  font-family: "Roboto", sans-serif;
-  color: gray;
-}
-
-body .hidden {
-  all: unset;
-  display: none;
+footer li ul {
+  list-style-type: none;
 }

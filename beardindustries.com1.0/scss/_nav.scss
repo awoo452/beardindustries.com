@@ -1,0 +1,97 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $nav-height;
+
+    margin: 0;
+
+    background-color: $nav-background-color;
+
+    border-bottom: 1px solid $line-color;
+
+    img {
+        max-height: $nav-image-height;
+        margin-left: 1em;
+    }
+    @media (min-width: 800px) {
+        img {
+            max-height: $nav-image-height-large;
+        }
+    }
+    .collapsed {
+        display: none!important;
+    }
+    .navContainer {
+        display: flex;
+        align-items: center;
+
+        #navIconContainer {
+            display: flex;
+
+            margin-right: .5em;
+
+            .navIcon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 35px;
+                width: 35px;
+
+                margin-left: .5em;
+                
+                border-bottom: 1px solid $line-color;
+                border-right: 1px solid $line-color;
+                border-radius: $nav-border-radius;
+
+                a {
+                    font-size: 20px;
+                    color: $font-accent-color;
+                }
+                a:hover {
+                    
+                }
+                #home {
+
+                }
+            }
+            .navIcon:hover {
+                border-color: $pop-color;
+                cursor: pointer;
+            }
+            
+        }
+        #navToggler {
+            
+            outline-style: none;
+
+            height: 35px;
+            width: 40px;
+            margin-right: 1em;
+
+            color: $font-accent-color;
+            background-color: transparent;
+            background-position: center;
+            
+            background-image: url($beard);
+            background-size: 100%;
+            border: none;
+            border: 1px solid $line-color;
+            border-radius: $nav-border-radius;
+
+            .navArrow {
+
+                font-size: 25px;
+
+                margin: 0;
+
+            }
+        }
+        #navToggler:hover {
+
+            cursor: pointer;
+            color: $font-accent-color;
+
+        }
+    }
+}
