@@ -120,7 +120,7 @@ main #home .row h1 {
 main #home .row h4 {
   position: relative;
   color: black;
-  background-image: linear-gradient(to right, yellow, transparent);
+  background-image: linear-gradient(to right, yellow, rgba(255, 255, 0, 0.556));
   padding-left: 1%;
   /*
     https://css-tricks.com/snippets/css/fluid-typography/
